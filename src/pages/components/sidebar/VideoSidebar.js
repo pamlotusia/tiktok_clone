@@ -7,7 +7,7 @@ import ShareIcon from '@mui/icons-material/Share'
 import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder'
 import BookmarkIcon from '@mui/icons-material/Bookmark'
 
-function VideoSidebar() {
+function VideoSidebar({ likes, messages, saves, shares }) {
   const [liked, setLiked] = useState(false)
   const [saved, setSaved] = useState(false)
 
@@ -27,12 +27,12 @@ function VideoSidebar() {
         ) : (
           <FavoriteBorderIcon sx={{ fontSize: 30 }} />
         )}
-        <p>{liked ? 1000 + 1 : 300}</p>
+        <p>{liked ? likes + 1 : likes}</p>
       </div>
 
       <div className="videoSidebar__options">
         <MessageIcon sx={{ fontSize: 30 }} />
-        <p>34</p>
+        <p>{messages}</p>
       </div>
 
       <div className="videoSidebar__options" onClick={handdleSaved}>
@@ -42,12 +42,12 @@ function VideoSidebar() {
           <BookmarkBorderIcon sx={{ fontSize: 30 }} />
         )}
 
-        <p>{saved ? 65+ 1 : 300}</p>
+        <p>{saved ? saves + 1 : saves}</p>
       </div>
 
       <div className="videoSidebar__options">
         <ShareIcon sx={{ fontSize: 30 }} />
-        <p>106</p>
+        <p>{shares}</p>
       </div>
     </div>
   )
