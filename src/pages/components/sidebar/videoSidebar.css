@@ -10,3 +10,9 @@
   margin: 15px 0;
   text-align: center;
 }
+
+@media only screen and (max-width: 470px){
+  .videoSidebar{
+    top: 45%;
+  }
+}

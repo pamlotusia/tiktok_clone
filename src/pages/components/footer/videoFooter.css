@@ -18,9 +18,6 @@
 
 }
 
-/* .videoFooter__icon{
-} */
-
 .videoFooterMusic__text {
   width: 80%;
   overflow-x: hidden;
@@ -57,4 +54,11 @@
     transform: translateX(-100%);
 
   }
+}
+
+@media only screen and (max-width: 470px){
+  .videoFooter{
+    bottom: 25%;
+  }
+
 }
